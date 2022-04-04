@@ -171,7 +171,7 @@ class BankAppAPIClient:
         except requests.exceptions.ConnectionError:
             return (500, "Service is unavailable.")
 
-        return self.__process_response(res.status_code)
+        return self.__process_response(res)
 
     @staticmethod
     def __process_response(res: requests.Response) -> Tuple[int, str]:
